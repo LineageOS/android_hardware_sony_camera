@@ -42,7 +42,7 @@ LOCAL_HAL_FILES := \
         src/QCameraHWI.cpp \
         src/QCameraStream.cpp \
         src/QCameraHWI_Metatags.cpp \
-       src/QCameraStream_Preview.cpp
+        src/QCameraStream_Preview.cpp
 
 LOCAL_HAL_WRAPPER_FILES := ../wrapper/QualcommCamera.cpp
 
@@ -54,8 +54,8 @@ LOCAL_C_INCLUDES := \
         $(TARGET_OUT_INTERMEDIATES)/include/mm-camera-interface_badger \
 
 LOCAL_C_INCLUDES += $(TARGET_OUT_HEADERS)/display \
-        hardware/qcom/media/libstagefrighthw \
-	system/media/camera/include
+        $(call project-path-for,qcom-media)/libstagefrighthw \
+        system/media/camera/include
 
 # if debug service layer and up , use stub camera!
 LOCAL_C_INCLUDES += \
