@@ -1,4 +1,4 @@
-ifeq ($(DEVICE_SPECIFIC_CAMERA_VENDOR),sony)
+ifeq ($(call my-dir),$(call project-path-for,qcom-camera))
 
 MM_V4L2_DRIVER_LIST += msm8960
 MM_V4L2_DRIVER_LIST += msm8974
